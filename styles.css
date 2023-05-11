@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1.6rem;
+  font-family: "Wix Madefor Display", sans-serif;
+  color: #1B263B;
+  display: flex;
+  justify-content: center;
+}
+
+.general-container {
+  min-width: 320px;
+  width: 100%;
+  max-width: 920px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+}
+.main__title {
+  text-align: center;
+  font-weight: 800;
+  margin-block-end: 1.8rem;
+}
+.main__subtitle {
+  margin-block-end: 1.8rem;
+}
+.main__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 0 2rem 0;
+}
+.main__header p {
+  padding: 1rem 2rem;
+  border: solid 0.05rem #415A77;
+  border-radius: 0.8rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.card__header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.card__image {
+  width: 110px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+.card__info {
+  margin-inline-start: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__info-numLista {
+  padding-inline-start: 0.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.card__info-lista {
+  margin-block: 0.6rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.card__info-candidato {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.card__body {
+  text-align: center;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+.card__body-porcentaje {
+  font-weight: 800;
+  font-size: 4rem;
+}
+.card__body-votos {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card--primary {
+  grid-area: 1/1/2/3;
+}
+.card--primary .card__image {
+  width: 160px;
+}
+.card--yapura {
+  border: solid 0.1rem rgba(188, 75, 81, 0.6);
+}
+.card--yapura .card__image {
+  border: solid 0.5rem #bc4b51;
+  background-color: rgba(188, 75, 81, 0.1);
+}
+.card--yapura .card__body {
+  border-top: solid 0.2rem #bc4b51;
+  background-color: rgba(188, 75, 81, 0.1);
+}
+.card--guanco {
+  border: solid 0.1rem rgba(244, 162, 89, 0.6);
+}
+.card--guanco .card__image {
+  border: solid 0.5rem #f4a259;
+  background-color: rgba(244, 162, 89, 0.1);
+}
+.card--guanco .card__body {
+  border-top: solid 0.2rem #f4a259;
+  background-color: rgba(244, 162, 89, 0.1);
+}
+.card--saavedra {
+  border: solid 0.1rem rgba(140, 179, 105, 0.6);
+}
+.card--saavedra .card__image {
+  border: solid 0.5rem #8cb369;
+  background-color: rgba(140, 179, 105, 0.1);
+}
+.card--saavedra .card__body {
+  border-top: solid 0.2rem #8cb369;
+  background-color: rgba(140, 179, 105, 0.1);
+}
+.card--caliva {
+  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+}
+.card--caliva .card__image {
+  border: solid 0.5rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+.card--caliva .card__body {
+  border-top: solid 0.2rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+.card--paz {
+  border: solid 0.1rem rgba(244, 226, 133, 0.6);
+}
+.card--paz .card__image {
+  border: solid 0.5rem #f4e285;
+  background-color: rgba(244, 226, 133, 0.1);
+}
+.card--paz .card__body {
+  border-top: solid 0.2rem #f4e285;
+  background-color: rgba(244, 226, 133, 0.1);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,95 @@
+.cards-container {
+  // padding-block-start: 0.5rem;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 2rem;
+
+}
+
+.card {
+  width: 100%;
+  border-radius: 0.8rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+
+  &__image {
+    width: 110px;
+
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+
+  &__info {
+    margin-inline-start: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-text {}
+
+    &-numLista {
+      padding-inline-start: 0.4rem;
+      font-size: $font-lg;
+      font-weight: $font-medium;
+    }
+
+    &-lista {
+      margin-block: 0.6rem;
+      font-weight: $font-bold;
+      font-size: $font-md;
+    }
+
+    &-candidato {
+      font-weight: $font-extra-bold;
+      font-size: $font-lg;
+    }
+  }
+
+  &__body {
+    text-align: center;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+
+    &-porcentaje {
+      font-weight: $font-extra-bold;
+      font-size: $font-xxl;
+    }
+    &-votos {
+      font-size: $font-lg;
+      font-weight: $font-bold;
+    }
+  }
+
+  &--primary {
+    grid-area: 1 / 1 / 2 / 3;
+
+    & .card__image {
+      width: 160px;
+    }
+  }
+
+  &--yapura{
+    @include card-style($color-bittersweet-shimmer);
+  }
+
+  &--guanco{
+    @include card-style($color-sandy-brown);
+  }
+
+  &--saavedra{
+    @include card-style($color-olivine);
+  }
+
+  &--caliva{
+    @include card-style($color-background-mid-dark);
+  }
+
+  &--paz{
+    @include card-style($color-flax);
+  }
+}

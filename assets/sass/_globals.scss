@@ -1,0 +1,84 @@
+$color-white: #FFFFFF;
+$color-background-dark: #1B263B;
+$color-background-mid-dark: #415A77;
+$color-background-light: #E0E1DD;
+
+$color-olivine: #8cb369ff;
+$color-olivine: #8cb369ff;
+$color-flax: #f4e285ff;
+$color-sandy-brown: #f4a259ff;
+$color-viridian: #5b8e7dff;
+$color-bittersweet-shimmer: #bc4b51ff;
+
+// Fonts
+$font-primary: 'Wix Madefor Display', sans-serif;;
+// Font weigths
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+$font-sm: 1.4rem;
+$font-md: 1.6rem;
+$font-lg: 2rem;
+$font-xl: 2.4rem;
+$font-xxl: 4rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1.6rem;
+
+  font-family: $font-primary;
+  color: $color-background-dark;
+  // background-color: $color-background-mid-dark;
+  display: flex;
+  justify-content: center;
+}
+
+.general-container {
+  min-width: 320px;
+  width: 100%;
+  max-width: 920px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+
+  &__title {
+    text-align: center;
+    font-weight: $font-extra-bold;
+    margin-block-end: 1.8rem;
+  }
+
+  &__subtitle {
+    margin-block-end: 1.8rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 0 2rem 0;
+
+    p {
+      padding: 1rem 2rem;
+      border: solid 0.05rem $color-background-mid-dark;
+      border-radius: 0.8rem;
+    }
+  }
+
+}
