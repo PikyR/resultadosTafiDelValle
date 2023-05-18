@@ -117,19 +117,20 @@
   // MOBILE
   @media (max-width: 960px) {
     display: grid;
-    grid-template-columns: auto 70px;
+    grid-template-columns: auto 80px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
     &__header {
       display: grid;
       align-items: center;
-      grid-template-columns: 50px auto;
+      grid-template-columns: 60px auto;
       padding: 0.6rem 0.4rem;
     }
 
     &__image {
       width: 50px;
       height: 50px;
+      justify-self: center;
     }
 
     &__info {
@@ -145,13 +146,14 @@
       }
   
       &-lista {
-        margin-block: 0.2rem;
+        margin-block: 0;
         font-weight: $font-bold;
-        font-size: $font-xsm;
+        font-size: $font-msm;
       }
   
       &-candidato {
-        font-size: $font-msm;
+        margin-top: 0.4rem;
+        font-size: $font-sm;
       }
     }
 
@@ -179,30 +181,31 @@
 
       & .card__header {
         align-items: center;
-        grid-template-columns: 55px auto;
+        grid-template-columns: 70px auto;
         padding: 0.6rem;
       }
 
       & .card__image {
-        width: 55px;
-        height: 55px;
+        width: 65px;
+        height: 65px;
       }
 
       & .card__info {
         &-text {
-          font-size: $font-xsm;
+          font-size: $font-sm;
         }
 
         &-numLista {
+          font-size: $font-sm;
           font-weight: $font-bold;
         }
 
         &-lista {
-          font-size: $font-xsm;
+          font-size: $font-sm;
         }
 
         &-candidato {
-          font-size: $font-msm;
+          font-size: $font-sm;
         }
       }
 
