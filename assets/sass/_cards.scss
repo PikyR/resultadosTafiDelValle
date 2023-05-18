@@ -7,8 +7,9 @@
   grid-gap: 2rem;
 
   @media (max-width: 960px) {
-    grid-template-columns: 400px ;
+    grid-template-columns: minmax(300px, 400px);
     grid-template-rows: auto;
+    gap: 1rem;
     justify-content: center;
   }
 }
@@ -116,36 +117,41 @@
   // MOBILE
   @media (max-width: 960px) {
     display: grid;
-    grid-template-columns: auto 100px;
+    grid-template-columns: auto 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
     &__header {
       display: grid;
       align-items: center;
-      grid-template-columns: 70px auto;
-      padding: 1rem;
+      grid-template-columns: 50px auto;
+      padding: 0.6rem 0.4rem;
     }
 
     &__image {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
     }
 
     &__info {
       margin-inline-start: 1rem;
 
+      &-text {
+        font-size: $font-xsm;
+      }
+
       &-numLista {
-        font-size: $font-sm;
+        font-size: $font-xsm;
         font-weight: $font-semi-bold;
       }
   
       &-lista {
-        margin-block: 0.6rem;
+        margin-block: 0.2rem;
         font-weight: $font-bold;
         font-size: $font-xsm;
       }
   
       &-candidato {
-        font-size: $font-sm;
+        font-size: $font-msm;
       }
     }
 
@@ -159,10 +165,10 @@
 
       &-porcentaje {
         font-weight: $font-extra-bold;
-        font-size: $font-xl;
+        font-size: $font-md;
       }
       &-votos {
-        font-size: $font-sm;
+        font-size: $font-msm;
         font-weight: $font-medium;
       }
     }
@@ -173,15 +179,20 @@
 
       & .card__header {
         align-items: center;
-        grid-template-columns: 100px auto;
+        grid-template-columns: 55px auto;
+        padding: 0.6rem;
       }
 
       & .card__image {
-        width: 100px;
-        height: 100px;
+        width: 55px;
+        height: 55px;
       }
 
       & .card__info {
+        &-text {
+          font-size: $font-xsm;
+        }
+
         &-numLista {
           font-weight: $font-bold;
         }
@@ -191,16 +202,16 @@
         }
 
         &-candidato {
-          font-size: $font-sm;
+          font-size: $font-msm;
         }
       }
 
       & .card__body {
         &-porcentaje {
-          font-size: $font-xl;
+          font-size: $font-md;
         }
         &-votos {
-          font-size: $font-sm;
+          font-size: $font-msm;
         }
       }
     }

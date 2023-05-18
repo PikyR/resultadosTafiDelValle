@@ -38,6 +38,19 @@ body {
 .main__subtitle {
   margin-block-end: 1.8rem;
 }
+@media (max-width: 960px) {
+  .main__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-block-end: 0.6rem;
+  }
+  .main__subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-block-end: 0.4rem;
+  }
+}
 .main__header {
   display: flex;
   flex-direction: row;
@@ -55,10 +68,10 @@ body {
 }
 @media (max-width: 960px) {
   .main__header p {
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     text-align: center;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 0.8rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -81,8 +94,9 @@ body {
 }
 @media (max-width: 960px) {
   .cards-container {
-    grid-template-columns: 400px;
+    grid-template-columns: minmax(300px, 400px);
     grid-template-rows: auto;
+    gap: 1rem;
     justify-content: center;
   }
 }
@@ -169,32 +183,36 @@ body {
 @media (max-width: 960px) {
   .card {
     display: grid;
-    grid-template-columns: auto 100px;
+    grid-template-columns: auto 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
   .card__header {
     display: grid;
     align-items: center;
-    grid-template-columns: 70px auto;
-    padding: 1rem;
+    grid-template-columns: 50px auto;
+    padding: 0.6rem 0.4rem;
   }
   .card__image {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .card__info {
     margin-inline-start: 1rem;
   }
+  .card__info-text {
+    font-size: 0.8rem;
+  }
   .card__info-numLista {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     font-weight: 600;
   }
   .card__info-lista {
-    margin-block: 0.6rem;
+    margin-block: 0.2rem;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .card__info-candidato {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .card__body {
     border-top-right-radius: 0.8rem;
@@ -206,10 +224,10 @@ body {
   }
   .card__body-porcentaje {
     font-weight: 800;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
   }
   .card__body-votos {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 500;
   }
   .card--primary {
@@ -218,26 +236,30 @@ body {
   }
   .card--primary .card__header {
     align-items: center;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 55px auto;
+    padding: 0.6rem;
   }
   .card--primary .card__image {
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 55px;
+  }
+  .card--primary .card__info-text {
+    font-size: 0.8rem;
   }
   .card--primary .card__info-numLista {
     font-weight: 700;
   }
   .card--primary .card__info-lista {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .card--primary .card__info-candidato {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .card--primary .card__body-porcentaje {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
   }
   .card--primary .card__body-votos {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 .card--yapura {
@@ -246,6 +268,11 @@ body {
 .card--yapura .card__image {
   border: solid 0.5rem #bc4b51;
   background-color: rgba(188, 75, 81, 0.1);
+}
+@media (max-width: 960px) {
+  .card--yapura .card__image {
+    border: solid 0.3rem #bc4b51;
+  }
 }
 .card--yapura .card__body {
   border-top: solid 0.2rem #bc4b51;
@@ -264,6 +291,11 @@ body {
   border: solid 0.5rem #f4a259;
   background-color: rgba(244, 162, 89, 0.1);
 }
+@media (max-width: 960px) {
+  .card--guanco .card__image {
+    border: solid 0.3rem #f4a259;
+  }
+}
 .card--guanco .card__body {
   border-top: solid 0.2rem #f4a259;
   background-color: rgba(244, 162, 89, 0.1);
@@ -280,6 +312,11 @@ body {
 .card--saavedra .card__image {
   border: solid 0.5rem #8cb369;
   background-color: rgba(140, 179, 105, 0.1);
+}
+@media (max-width: 960px) {
+  .card--saavedra .card__image {
+    border: solid 0.3rem #8cb369;
+  }
 }
 .card--saavedra .card__body {
   border-top: solid 0.2rem #8cb369;
@@ -298,6 +335,11 @@ body {
   border: solid 0.5rem #415A77;
   background-color: rgba(65, 90, 119, 0.1);
 }
+@media (max-width: 960px) {
+  .card--caliva .card__image {
+    border: solid 0.3rem #415A77;
+  }
+}
 .card--caliva .card__body {
   border-top: solid 0.2rem #415A77;
   background-color: rgba(65, 90, 119, 0.1);
@@ -314,6 +356,11 @@ body {
 .card--paz .card__image {
   border: solid 0.5rem #f4e285;
   background-color: rgba(244, 226, 133, 0.1);
+}
+@media (max-width: 960px) {
+  .card--paz .card__image {
+    border: solid 0.3rem #f4e285;
+  }
 }
 .card--paz .card__body {
   border-top: solid 0.2rem #f4e285;
