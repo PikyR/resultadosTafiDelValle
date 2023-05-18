@@ -1,7 +1,7 @@
-$color-white: #FFFFFF;
+$color-white: #f8f8f8;
 $color-background-dark: #1B263B;
 $color-background-mid-dark: #415A77;
-$color-background-light: #E0E1DD;
+$color-background-light: #e8e9e5;
 
 $color-olivine: #8cb369ff;
 $color-olivine: #8cb369ff;
@@ -19,11 +19,13 @@ $font-semi-bold: 600;
 $font-bold: 700;
 $font-extra-bold: 800;
 
+$font-xsm: 1rem;
 $font-sm: 1.4rem;
 $font-md: 1.6rem;
-$font-lg: 2rem;
+$font-lg: 1.8rem;
 $font-xl: 2.4rem;
-$font-xxl: 4rem;
+$font-xxl: 3rem;
+$font-sxl: 4rem;
 
 * {
   margin: 0;
@@ -41,7 +43,7 @@ body {
 
   font-family: $font-primary;
   color: $color-background-dark;
-  // background-color: $color-background-mid-dark;
+  background-color: $color-background-light;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +51,7 @@ body {
 .general-container {
   min-width: 320px;
   width: 100%;
-  max-width: 920px;
+  max-width: 1000px;
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -75,9 +77,31 @@ body {
     margin: 0 0 2rem 0;
 
     p {
-      padding: 1rem 2rem;
+      padding: 1.4rem 3rem;
       border: solid 0.05rem $color-background-mid-dark;
       border-radius: 0.8rem;
+      font-size: $font-lg;
+      font-weight: $font-semi-bold;
+
+      background-color: $color-white;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+      
+      @media (max-width: 960px) {
+        font-size: $font-sm;
+        font-weight: $font-medium;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        border: none;
+        border-radius: 0;
+        box-shadow:none;
+        margin-bottom: 0.1rem;
+      }
+    }
+
+    @media (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 1rem 0;
     }
   }
 

@@ -13,6 +13,7 @@ body {
   font-size: 1.6rem;
   font-family: "Wix Madefor Display", sans-serif;
   color: #1B263B;
+  background-color: #e8e9e5;
   display: flex;
   justify-content: center;
 }
@@ -20,7 +21,7 @@ body {
 .general-container {
   min-width: 320px;
   width: 100%;
-  max-width: 920px;
+  max-width: 1000px;
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -44,9 +45,32 @@ body {
   margin: 0 0 2rem 0;
 }
 .main__header p {
-  padding: 1rem 2rem;
+  padding: 1.4rem 3rem;
   border: solid 0.05rem #415A77;
   border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+@media (max-width: 960px) {
+  .main__header p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0.1rem;
+  }
+}
+@media (max-width: 960px) {
+  .main__header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1rem 0;
+  }
 }
 
 .cards-container {
@@ -55,20 +79,33 @@ body {
   grid-template-rows: repeat(4, auto);
   grid-gap: 2rem;
 }
+@media (max-width: 960px) {
+  .cards-container {
+    grid-template-columns: 400px;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+}
 
 .card {
   width: 100%;
   border-radius: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #f8f8f8;
 }
 .card__header {
   display: flex;
-  justify-content: space-evenly;
   padding: 1rem;
+}
+@media (min-width: 960) {
+  .card__header {
+    justify-content: center;
+  }
 }
 .card__image {
   width: 110px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #f8f8f8;
 }
 .card__info {
   margin-inline-start: 1.2rem;
@@ -78,7 +115,7 @@ body {
 }
 .card__info-numLista {
   padding-inline-start: 0.4rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 .card__info-lista {
@@ -88,26 +125,120 @@ body {
 }
 .card__info-candidato {
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .card__body {
+  padding-block: 0.6rem;
   text-align: center;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
 .card__body-porcentaje {
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .card__body-votos {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 .card--primary {
   grid-area: 1/1/2/3;
+  width: 700px;
+  margin: 0 auto;
 }
 .card--primary .card__image {
-  width: 160px;
+  width: 140px;
+}
+.card--primary .card__info-numLista {
+  font-weight: 700;
+}
+.card--primary .card__info-lista {
+  font-size: 1.8rem;
+}
+.card--primary .card__info-candidato {
+  font-size: 3rem;
+}
+.card--primary .card__body-porcentaje {
+  font-weight: 800;
+  font-size: 4rem;
+}
+.card--primary .card__body-votos {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+@media (max-width: 960px) {
+  .card {
+    display: grid;
+    grid-template-columns: auto 100px;
+  }
+  .card__header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70px auto;
+    padding: 1rem;
+  }
+  .card__image {
+    width: 70px;
+    height: 70px;
+  }
+  .card__info {
+    margin-inline-start: 1rem;
+  }
+  .card__info-numLista {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .card__info-lista {
+    margin-block: 0.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .card__info-candidato {
+    font-size: 1.4rem;
+  }
+  .card__body {
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__body-porcentaje {
+    font-weight: 800;
+    font-size: 2.4rem;
+  }
+  .card__body-votos {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .card--primary {
+    grid-area: 1/1;
+    width: 100%;
+  }
+  .card--primary .card__header {
+    align-items: center;
+    grid-template-columns: 100px auto;
+  }
+  .card--primary .card__image {
+    width: 100px;
+    height: 100px;
+  }
+  .card--primary .card__info-numLista {
+    font-weight: 700;
+  }
+  .card--primary .card__info-lista {
+    font-size: 1rem;
+  }
+  .card--primary .card__info-candidato {
+    font-size: 1.4rem;
+  }
+  .card--primary .card__body-porcentaje {
+    font-size: 2.4rem;
+  }
+  .card--primary .card__body-votos {
+    font-size: 1.4rem;
+  }
 }
 .card--yapura {
   border: solid 0.1rem rgba(188, 75, 81, 0.6);
@@ -120,6 +251,12 @@ body {
   border-top: solid 0.2rem #bc4b51;
   background-color: rgba(188, 75, 81, 0.1);
 }
+@media (max-width: 960px) {
+  .card--yapura .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #bc4b51;
+  }
+}
 .card--guanco {
   border: solid 0.1rem rgba(244, 162, 89, 0.6);
 }
@@ -130,6 +267,12 @@ body {
 .card--guanco .card__body {
   border-top: solid 0.2rem #f4a259;
   background-color: rgba(244, 162, 89, 0.1);
+}
+@media (max-width: 960px) {
+  .card--guanco .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #f4a259;
+  }
 }
 .card--saavedra {
   border: solid 0.1rem rgba(140, 179, 105, 0.6);
@@ -142,6 +285,12 @@ body {
   border-top: solid 0.2rem #8cb369;
   background-color: rgba(140, 179, 105, 0.1);
 }
+@media (max-width: 960px) {
+  .card--saavedra .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #8cb369;
+  }
+}
 .card--caliva {
   border: solid 0.1rem rgba(65, 90, 119, 0.6);
 }
@@ -153,6 +302,12 @@ body {
   border-top: solid 0.2rem #415A77;
   background-color: rgba(65, 90, 119, 0.1);
 }
+@media (max-width: 960px) {
+  .card--caliva .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #415A77;
+  }
+}
 .card--paz {
   border: solid 0.1rem rgba(244, 226, 133, 0.6);
 }
@@ -163,6 +318,12 @@ body {
 .card--paz .card__body {
   border-top: solid 0.2rem #f4e285;
   background-color: rgba(244, 226, 133, 0.1);
+}
+@media (max-width: 960px) {
+  .card--paz .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #f4e285;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

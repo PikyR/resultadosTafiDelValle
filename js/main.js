@@ -157,8 +157,8 @@ function renderInt(data, i) {
 
   const votos = document.createElement('p');
   votos.classList.add('card__body-votos');
-  votos.textContent = `${data.VOTOS}`;
-  cardBody.append(porcentaje, votos);
+  votos.textContent = `Votos: ${data.VOTOS}`;
+  cardBody.append(votos, porcentaje);
 
   card.append(cardHeader, cardBody);
 

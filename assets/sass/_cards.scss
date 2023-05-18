@@ -6,16 +6,27 @@
   grid-template-rows: repeat(4, auto);
   grid-gap: 2rem;
 
+  @media (max-width: 960px) {
+    grid-template-columns: 400px ;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
 }
 
 .card {
   width: 100%;
   border-radius: 0.8rem;
 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: $color-white;
+
   &__header {
     display: flex;
-    justify-content: space-evenly;
     padding: 1rem;
+
+    @media (min-width: 960) {
+      justify-content: center;
+    }
   }
 
   &__image {
@@ -30,7 +41,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &-text {}
+    &-text {
+    }
 
     &-numLista {
       padding-inline-start: 0.4rem;
@@ -51,6 +63,7 @@
   }
 
   &__body {
+    padding-block: 0.6rem;
     text-align: center;
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
@@ -61,35 +74,155 @@
     }
     &-votos {
       font-size: $font-lg;
-      font-weight: $font-bold;
+      font-weight: $font-medium;
     }
   }
 
   &--primary {
     grid-area: 1 / 1 / 2 / 3;
+    width: 700px;
+    margin: 0 auto;
 
     & .card__image {
-      width: 160px;
+      width: 140px;
+    }
+
+    & .card__info {
+      &-numLista {
+        font-weight: $font-bold;
+      }
+  
+      &-lista {
+        font-size: $font-lg;
+      }
+  
+      &-candidato {
+        font-size: $font-xxl;
+      }
+    }
+
+    & .card__body {
+      &-porcentaje {
+        font-weight: $font-extra-bold;
+        font-size: $font-sxl;
+      }
+      &-votos {
+        font-size: $font-lg;
+        font-weight: $font-medium;
+      }
     }
   }
 
-  &--yapura{
+  // MOBILE
+  @media (max-width: 960px) {
+    display: grid;
+    grid-template-columns: auto 100px;
+
+    &__header {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 70px auto;
+      padding: 1rem;
+    }
+
+    &__image {
+      width: 70px;
+      height: 70px;
+    }
+
+    &__info {
+      margin-inline-start: 1rem;
+
+      &-numLista {
+        font-size: $font-sm;
+        font-weight: $font-semi-bold;
+      }
+  
+      &-lista {
+        margin-block: 0.6rem;
+        font-weight: $font-bold;
+        font-size: $font-xsm;
+      }
+  
+      &-candidato {
+        font-size: $font-sm;
+      }
+    }
+
+    &__body {
+      border-top-right-radius: 0.8rem;
+      border-bottom-right-radius: 0.8rem;
+      border-bottom-left-radius: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-porcentaje {
+        font-weight: $font-extra-bold;
+        font-size: $font-xl;
+      }
+      &-votos {
+        font-size: $font-sm;
+        font-weight: $font-medium;
+      }
+    }
+
+    &--primary {
+      grid-area: 1 / 1;
+      width: 100%;
+
+      & .card__header {
+        align-items: center;
+        grid-template-columns: 100px auto;
+      }
+
+      & .card__image {
+        width: 100px;
+        height: 100px;
+      }
+
+      & .card__info {
+        &-numLista {
+          font-weight: $font-bold;
+        }
+
+        &-lista {
+          font-size: $font-xsm;
+        }
+
+        &-candidato {
+          font-size: $font-sm;
+        }
+      }
+
+      & .card__body {
+        &-porcentaje {
+          font-size: $font-xl;
+        }
+        &-votos {
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+
+  &--yapura {
     @include card-style($color-bittersweet-shimmer);
   }
 
-  &--guanco{
+  &--guanco {
     @include card-style($color-sandy-brown);
   }
 
-  &--saavedra{
+  &--saavedra {
     @include card-style($color-olivine);
   }
 
-  &--caliva{
+  &--caliva {
     @include card-style($color-background-mid-dark);
   }
 
-  &--paz{
+  &--paz {
     @include card-style($color-flax);
   }
 }
