@@ -1,0 +1,14 @@
+.cards-container--gob {
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1 fr));
+  // grid-template-rows: ;
+  align-items: stretch;
+  grid-gap: 2rem;
+  
+  & .card--primary {
+
+  }
+}
+
+.general-container--gob{
+  max-width: 1500px;
+}

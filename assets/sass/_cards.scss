@@ -1,13 +1,11 @@
 .cards-container {
-  // padding-block-start: 0.5rem;
   display: grid;
-
+  justify-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, auto);
   grid-gap: 2rem;
 
   @media (max-width: 960px) {
-    grid-template-columns: minmax(300px, 400px);
+    grid-template-columns: minmax(300px, 600px);
     grid-template-rows: auto;
     gap: 1rem;
     justify-content: center;
@@ -22,27 +20,23 @@
   background-color: $color-white;
 
   &__header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 120px auto;
+    align-items: center;
     padding: 1rem;
-
-    @media (min-width: 960) {
-      justify-content: center;
-    }
   }
 
   &__image {
     width: 110px;
-
+    justify-self: center;
     border-radius: 50%;
-    background-color: $color-white;
   }
 
   &__info {
     margin-inline-start: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     &-text {
+      font-size: $font-md;
     }
 
     &-numLista {
@@ -82,7 +76,11 @@
   &--primary {
     grid-area: 1 / 1 / 2 / 3;
     width: 700px;
-    margin: 0 auto;
+
+    & .card__header {
+      grid-template-columns: 160px auto;
+      padding: 1rem;
+    }
 
     & .card__image {
       width: 140px;
@@ -92,11 +90,11 @@
       &-numLista {
         font-weight: $font-bold;
       }
-  
+
       &-lista {
         font-size: $font-lg;
       }
-  
+
       &-candidato {
         font-size: $font-xxl;
       }
@@ -114,6 +112,10 @@
     }
   }
 
+  &--gobernador{
+    @include card-style($color-background-mid-dark);
+  }
+
   // MOBILE
   @media (max-width: 960px) {
     display: grid;
@@ -122,7 +124,6 @@
 
     &__header {
       display: grid;
-      align-items: center;
       grid-template-columns: 60px auto;
       padding: 0.6rem 0.4rem;
     }
@@ -130,7 +131,6 @@
     &__image {
       width: 50px;
       height: 50px;
-      justify-self: center;
     }
 
     &__info {
@@ -144,13 +144,13 @@
         font-size: $font-xsm;
         font-weight: $font-semi-bold;
       }
-  
+
       &-lista {
         margin-block: 0;
         font-weight: $font-bold;
         font-size: $font-msm;
       }
-  
+
       &-candidato {
         margin-top: 0.4rem;
         font-size: $font-sm;
@@ -192,16 +192,16 @@
 
       & .card__info {
         &-text {
-          font-size: $font-sm;
+          font-size: $font-xsm;
         }
 
         &-numLista {
-          font-size: $font-sm;
+          font-size: $font-xsm;
           font-weight: $font-bold;
         }
 
         &-lista {
-          font-size: $font-sm;
+          font-size: $font-msm;
         }
 
         &-candidato {

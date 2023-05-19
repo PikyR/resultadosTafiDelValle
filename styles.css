@@ -20,7 +20,7 @@ body {
 
 .general-container {
   min-width: 320px;
-  width: 100%;
+  width: fit-content;
   max-width: 1000px;
   padding: 1.2rem;
   display: flex;
@@ -38,19 +38,6 @@ body {
 .main__subtitle {
   margin-block-end: 1.8rem;
 }
-@media (max-width: 960px) {
-  .main__title {
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-block-end: 0.6rem;
-  }
-  .main__subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-block-end: 0.4rem;
-  }
-}
 .main__header {
   display: flex;
   flex-direction: row;
@@ -67,34 +54,58 @@ body {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 @media (max-width: 960px) {
+  .main__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-block-end: 0.6rem;
+  }
+  .main__subtitle {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-block-end: 1rem;
+  }
+  .main__header {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
   .main__header p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     padding: 0.4rem 0.8rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    margin-bottom: 0.1rem;
+    margin-inline: 1rem;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 420px) {
   .main__header {
-    display: flex;
     flex-direction: column;
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem;
+  }
+  .main__header p {
+    padding: 0.4rem 0rem;
+    margin-bottom: 0.1rem;
+    border: none;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: none;
   }
 }
 
 .cards-container {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, auto);
   grid-gap: 2rem;
 }
 @media (max-width: 960px) {
   .cards-container {
-    grid-template-columns: minmax(300px, 400px);
+    grid-template-columns: minmax(300px, 600px);
     grid-template-rows: auto;
     gap: 1rem;
     justify-content: center;
@@ -108,24 +119,21 @@ body {
   background-color: #f8f8f8;
 }
 .card__header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px auto;
+  align-items: center;
   padding: 1rem;
-}
-@media (min-width: 960) {
-  .card__header {
-    justify-content: center;
-  }
 }
 .card__image {
   width: 110px;
+  justify-self: center;
   border-radius: 50%;
-  background-color: #f8f8f8;
 }
 .card__info {
   margin-inline-start: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+.card__info-text {
+  font-size: 1.6rem;
 }
 .card__info-numLista {
   padding-inline-start: 0.4rem;
@@ -158,7 +166,10 @@ body {
 .card--primary {
   grid-area: 1/1/2/3;
   width: 700px;
-  margin: 0 auto;
+}
+.card--primary .card__header {
+  grid-template-columns: 160px auto;
+  padding: 1rem;
 }
 .card--primary .card__image {
   width: 140px;
@@ -180,6 +191,28 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 }
+.card--gobernador {
+  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+}
+.card--gobernador .card__image {
+  border: solid 0.5rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--gobernador .card__image {
+    border: solid 0.3rem #415A77;
+  }
+}
+.card--gobernador .card__body {
+  border-top: solid 0.2rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--gobernador .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #415A77;
+  }
+}
 @media (max-width: 960px) {
   .card {
     display: grid;
@@ -188,14 +221,12 @@ body {
   }
   .card__header {
     display: grid;
-    align-items: center;
     grid-template-columns: 60px auto;
     padding: 0.6rem 0.4rem;
   }
   .card__image {
     width: 50px;
     height: 50px;
-    justify-self: center;
   }
   .card__info {
     margin-inline-start: 1rem;
@@ -246,14 +277,14 @@ body {
     height: 65px;
   }
   .card--primary .card__info-text {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .card--primary .card__info-numLista {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 700;
   }
   .card--primary .card__info-lista {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .card--primary .card__info-candidato {
     font-size: 1.2rem;
@@ -374,6 +405,14 @@ body {
     border-top: none;
     border-left: solid 0.2rem #f4e285;
   }
+}
+
+.cards-container--gob {
+  align-items: stretch;
+  grid-gap: 2rem;
+}
+.general-container--gob {
+  max-width: 1500px;
 }
 
 /*# sourceMappingURL=styles.css.map */
