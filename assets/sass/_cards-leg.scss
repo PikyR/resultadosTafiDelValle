@@ -1,0 +1,74 @@
+.cards-container--leg {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+
+  & .card--primary {}
+
+  @media (max-width: 1560px) {
+    grid-gap: 0.8rem;
+    grid-template-columns: minmax(300px, 600px);
+    justify-content: center;
+  }
+}
+
+.card--legislador {
+  @include card-style($color-background-mid-dark);
+
+  & .card__header {
+    display: block;
+    padding: 0.6rem;
+  }
+
+  @media (max-width: 1560px) {
+    display: grid;
+    grid-template-columns: auto 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    & .card__header {
+      display: block;
+    }
+
+    & .card__info {
+      &-text {
+        font-size: $font-xsm;
+      }
+
+      &-numLista {
+        font-size: $font-xsm;
+        font-weight: $font-semi-bold;
+      }
+
+      &-lista {
+        margin-block: 0;
+        font-weight: $font-bold;
+        font-size: $font-msm;
+      }
+
+      &-candidato {
+        margin-top: 0.4rem;
+        font-size: $font-sm;
+      }
+    }
+
+    & .card__body {
+      border-bottom-left-radius: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border-top: none;
+      border-left: solid 0.2rem $color-background-mid-dark;
+
+      &-porcentaje {
+        font-size: $font-md;
+      }
+      &-votos {
+        font-size: $font-msm;
+      }
+    }
+  }
+}
+
+.general-container--leg{
+  max-width: 1800px;
+}

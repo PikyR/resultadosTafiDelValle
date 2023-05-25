@@ -191,28 +191,6 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 }
-.card--gobernador {
-  border: solid 0.1rem rgba(65, 90, 119, 0.6);
-}
-.card--gobernador .card__image {
-  border: solid 0.5rem #415A77;
-  background-color: rgba(65, 90, 119, 0.1);
-}
-@media (max-width: 960px) {
-  .card--gobernador .card__image {
-    border: solid 0.3rem #415A77;
-  }
-}
-.card--gobernador .card__body {
-  border-top: solid 0.2rem #415A77;
-  background-color: rgba(65, 90, 119, 0.1);
-}
-@media (max-width: 960px) {
-  .card--gobernador .card__body {
-    border-top: none;
-    border-left: solid 0.2rem #415A77;
-  }
-}
 @media (max-width: 960px) {
   .card {
     display: grid;
@@ -409,10 +387,139 @@ body {
 
 .cards-container--gob {
   align-items: stretch;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 }
+@media (max-width: 960px) {
+  .cards-container--gob {
+    grid-gap: 0.8rem;
+  }
+}
+
+.card--gobernador {
+  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+}
+.card--gobernador .card__image {
+  border: solid 0.5rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--gobernador .card__image {
+    border: solid 0.3rem #415A77;
+  }
+}
+.card--gobernador .card__body {
+  border-top: solid 0.2rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--gobernador .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #415A77;
+  }
+}
+.card--gobernador .card__header {
+  padding: 0.6rem;
+  grid-template-columns: 90px auto;
+}
+.card--gobernador .card__image {
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 960px) {
+  .card--gobernador .card__image {
+    width: 50px;
+    height: 50px;
+  }
+  .card--gobernador .card__header {
+    grid-template-columns: 60px auto;
+  }
+}
+
 .general-container--gob {
   max-width: 1500px;
+}
+
+.cards-container--leg {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+@media (max-width: 1560px) {
+  .cards-container--leg {
+    grid-gap: 0.8rem;
+    grid-template-columns: minmax(300px, 600px);
+    justify-content: center;
+  }
+}
+
+.card--legislador {
+  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+}
+.card--legislador .card__image {
+  border: solid 0.5rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--legislador .card__image {
+    border: solid 0.3rem #415A77;
+  }
+}
+.card--legislador .card__body {
+  border-top: solid 0.2rem #415A77;
+  background-color: rgba(65, 90, 119, 0.1);
+}
+@media (max-width: 960px) {
+  .card--legislador .card__body {
+    border-top: none;
+    border-left: solid 0.2rem #415A77;
+  }
+}
+.card--legislador .card__header {
+  display: block;
+  padding: 0.6rem;
+}
+@media (max-width: 1560px) {
+  .card--legislador {
+    display: grid;
+    grid-template-columns: auto 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  .card--legislador .card__header {
+    display: block;
+  }
+  .card--legislador .card__info-text {
+    font-size: 0.8rem;
+  }
+  .card--legislador .card__info-numLista {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .card--legislador .card__info-lista {
+    margin-block: 0;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .card--legislador .card__info-candidato {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+  }
+  .card--legislador .card__body {
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: none;
+    border-left: solid 0.2rem #415A77;
+  }
+  .card--legislador .card__body-porcentaje {
+    font-size: 1.6rem;
+  }
+  .card--legislador .card__body-votos {
+    font-size: 1rem;
+  }
+}
+
+.general-container--leg {
+  max-width: 1800px;
 }
 
 /*# sourceMappingURL=styles.css.map */

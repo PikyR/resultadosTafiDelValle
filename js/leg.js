@@ -1,27 +1,16 @@
 // GOBERNADOR
-const cardsContainerGob = document.querySelector(".cards-container--gob");
-const mesasEscrutadasGob = document.querySelector("#mesas-escrutadas-gob");
-const votosEmitidosGob = document.querySelector("#votos-emitidos-gob");
-const votosBlancoGob = document.querySelector("#votos-blanco-gob");
+const cardsContainerLeg = document.querySelector(".cards-container--leg");
+const mesasEscrutadasLeg = document.querySelector("#mesas-escrutadas-leg");
+const votosEmitidosLeg = document.querySelector("#votos-emitidos-leg");
+const votosBlancoLeg = document.querySelector("#votos-blanco-leg");
 
-function renderGob(data, i) {
+function renderLeg(data, i) {
   const card = document.createElement('div');
   card.classList.add('card');
-  card.classList.add('card--gobernador');
-
-  // if (i === 0) {
-  //   card.classList.add('card--primary');
-  // }
+  card.classList.add('card--legislador');
 
   const cardHeader = document.createElement('div');
   cardHeader.classList.add('card__header');
-
-  const cardImage = document.createElement('img');
-  cardImage.classList.add('card__image');
-  // CAMBIAR                              
-  // cardImage.setAttribute('src', `assets/images/gobernador/${data.LISTA}.png`);
-  cardImage.setAttribute('src', `assets/images/gobernador/img.jpg`);
-  cardImage.setAttribute('alt', `${data.CANDIDATO}`);
 
   const cardInfo = document.createElement('div');
   cardInfo.classList.add('card__info');
@@ -45,7 +34,7 @@ function renderGob(data, i) {
   candidato.textContent = `${data.CANDIDATO}`;
 
   cardInfo.append(infoText, lista, candidato);
-  cardHeader.append(cardImage,cardInfo);
+  cardHeader.append(cardInfo);
 
   const cardBody = document.createElement('div');
   cardBody.classList.add('card__body');
@@ -61,22 +50,22 @@ function renderGob(data, i) {
 
   card.append(cardHeader, cardBody);
 
-  cardsContainerGob.appendChild(card);
+  cardsContainerLeg.appendChild(card);
 }
 
-async function loadGob() {
-  const resultadoGob = await fetchData(URL(CATEGORIA.GOB));
-  const resultadoDividido = dividirArreglo(resultadoGob);
+async function loadLeg() {
+  const resultadoLeg = await fetchData(URL(CATEGORIA.LEG));
+  const resultadoDividido = dividirArreglo(resultadoLeg);
 
   const resultadoCandidatos = ordenarPorVotos(resultadoDividido[0]);
   const resultadoOtros = ordenarPorVotos(resultadoDividido[1]);
 
-  votosEmitidosGob.textContent = `${resultadoOtros[0].VOTOS}`;
-  votosBlancoGob.textContent = `${resultadoOtros[1].VOTOS}`;
+  votosEmitidosLeg.textContent = `${resultadoOtros[0].VOTOS}`;
+  votosBlancoLeg.textContent = `${resultadoOtros[1].VOTOS}`;
 
   resultadoCandidatos.forEach((element, i) => {
-    renderGob(element, i);
+    renderLeg(element, i);
   });
 }
 
-loadGob();
+loadLeg();

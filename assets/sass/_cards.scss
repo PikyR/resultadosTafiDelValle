@@ -112,10 +112,6 @@
     }
   }
 
-  &--gobernador{
-    @include card-style($color-background-mid-dark);
-  }
-
   // MOBILE
   @media (max-width: 960px) {
     display: grid;
