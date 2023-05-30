@@ -8,7 +8,7 @@ const votosBlancoCon = document.querySelector("#votos-blanco-conc");
 function renderCon(data, i) {
   const card = document.createElement('div');
   card.classList.add('card');
-  card.classList.add('card--gobernador');
+  card.classList.add('card--concejal');
 
   const cardHeader = document.createElement('div');
   cardHeader.classList.add('card__header');
@@ -44,9 +44,9 @@ function renderCon(data, i) {
   cardInfo.append(infoText, lista, candidato);
 
   if (i <= 5) {
-    card.classList.add('card--primary');
     cardHeader.append(cardImage,cardInfo);
   } else {
+    card.classList.add('card--secondary');
     cardHeader.append(cardInfo);
   }
 

@@ -22,6 +22,7 @@ $font-extra-bold: 800;
 $font-xsm: 0.8rem;
 $font-msm: 1rem;
 $font-sm: 1.2rem;
+$font-smd: 1.4rem;
 $font-md: 1.6rem;
 $font-lg: 1.8rem;
 $font-xl: 2.6rem;
@@ -60,6 +61,7 @@ body {
 
 .main {
   width: 100%;
+  background-color: #415A77;
 
   &__title {
     text-align: center;

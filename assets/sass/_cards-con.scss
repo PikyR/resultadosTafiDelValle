@@ -1,0 +1,118 @@
+.cards-container--primary {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 150px;
+  grid-gap: 0.2rem;
+  margin-block-end: 0.4rem;
+
+  & .card--concejal {
+    & .card__header {
+      // display: grid;
+      grid-template-columns: 50px auto;
+      padding: 0.8rem 0.4rem;
+    }
+  
+    & .card__image {
+      width: 50px;
+    }
+  
+    & .card__info {
+      margin-inline-start: 0.6rem;
+  
+      &-text {
+        font-size: $font-msm;
+      }
+  
+      &-numLista {
+        padding-inline-start: 0.4rem;
+        font-size: $font-sm;
+      }
+  
+      &-lista {
+        margin-block: 0.2rem;
+        font-size: $font-sm;
+      }
+  
+      &-candidato {
+        font-weight: $font-extra-bold;
+        font-size: $font-sm;
+      }
+    }
+
+    & .card__body {
+      padding-block: 0.2rem;
+
+      &-porcentaje {
+        font-weight: $font-extra-bold;
+        font-size: $font-xl;
+      }
+      &-votos {
+        font-size: $font-smd;
+        font-weight: $font-medium;
+      }
+    }
+  }
+}
+
+.cards-container--conc {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 50px);
+  gap: 0.4rem;
+
+
+}
+
+.card--concejal {
+  @include card-style($color-background-mid-dark);
+}
+
+.card--secondary {
+  display: grid;
+  grid-template-columns: auto 80px;
+  box-shadow: none;
+
+  & .card__header {
+    display: block;
+    padding: 0.4rem;
+  }
+
+  & .card__info {
+    margin-inline-start: 0.6rem;
+    &-text {
+      font-size: $font-xsm;
+    }
+
+    &-numLista {
+      font-size: $font-xsm;
+      font-weight: $font-semi-bold;
+    }
+
+    &-lista {
+      margin-block: 0;
+      font-weight: $font-bold;
+      font-size: $font-msm;
+    }
+
+    &-candidato {
+      margin-top: 0.2rem;
+      font-size: $font-sm;
+    }
+  }
+
+  & .card__body {
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-top: none;
+    border-left: solid 0.2rem $color-background-mid-dark;
+
+    &-porcentaje {
+      font-size: $font-md;
+    }
+    &-votos {
+      font-size: $font-msm;
+    }
+  }
+}
