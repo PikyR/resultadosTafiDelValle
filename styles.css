@@ -477,6 +477,25 @@ body {
   display: block;
   padding: 0.6rem;
 }
+.card--legislador .card__info {
+  display: grid;
+  grid-template-columns: 45px auto;
+}
+.card--legislador .card__info-text {
+  grid-area: 1/1/3/2;
+  align-self: center;
+  text-align: right;
+  padding-inline-end: 1.2rem;
+}
+.card--legislador .card__info-candidato {
+  grid-area: 2/2/3/3;
+}
+.card--legislador .card__body-porcentaje {
+  font-size: 2.6rem;
+}
+.card--legislador .card__body-votos {
+  font-size: 1.6rem;
+}
 @media (max-width: 1560px) {
   .card--legislador {
     display: grid;
