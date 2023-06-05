@@ -1,38 +1,45 @@
+.general-container--conc{
+  max-width: 1800px;
+}
+
 .cards-container--primary {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 150px;
-  grid-gap: 0.2rem;
-  margin-block-end: 0.4rem;
+  grid-template-rows: auto;
+  grid-gap: 0.6rem;
+  margin-block-end: 1rem;
 
   & .card--concejal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     & .card__header {
       // display: grid;
       grid-template-columns: 50px auto;
       padding: 0.8rem 0.4rem;
     }
-  
+
     & .card__image {
       width: 50px;
     }
-  
+
     & .card__info {
       margin-inline-start: 0.6rem;
-  
+
       &-text {
         font-size: $font-msm;
       }
-  
+
       &-numLista {
         padding-inline-start: 0.4rem;
         font-size: $font-sm;
       }
-  
+
       &-lista {
         margin-block: 0.2rem;
-        font-size: $font-sm;
+        font-size: $font-msm;
       }
-  
+
       &-candidato {
         font-weight: $font-extra-bold;
         font-size: $font-sm;
@@ -56,20 +63,21 @@
 
 .cards-container--conc {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 50px);
-  gap: 0.4rem;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0.6rem;
 
 
 }
 
 .card--concejal {
-  @include card-style($color-background-mid-dark);
+  @include card-style($color-styles-light);
 }
 
 .card--secondary {
   display: grid;
   grid-template-columns: auto 80px;
   box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
   & .card__header {
     display: block;
@@ -78,24 +86,25 @@
 
   & .card__info {
     margin-inline-start: 0.6rem;
+    
     &-text {
-      font-size: $font-xsm;
+      font-size: $font-msm;
     }
 
     &-numLista {
-      font-size: $font-xsm;
+      font-size: $font-msm;
       font-weight: $font-semi-bold;
     }
 
     &-lista {
       margin-block: 0;
       font-weight: $font-bold;
-      font-size: $font-msm;
+      font-size: $font-sm;
     }
 
     &-candidato {
-      margin-top: 0.2rem;
-      font-size: $font-sm;
+      margin-top: 0.1rem;
+      font-size: $font-smd;
     }
   }
 
@@ -106,10 +115,10 @@
     justify-content: center;
 
     border-top: none;
-    border-left: solid 0.2rem $color-background-mid-dark;
+    border-left: solid 0.1rem;
 
     &-porcentaje {
-      font-size: $font-md;
+      font-size: $font-lg;
     }
     &-votos {
       font-size: $font-msm;

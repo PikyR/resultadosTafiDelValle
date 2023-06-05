@@ -12,7 +12,7 @@ body {
   min-width: 320px;
   font-size: 1.6rem;
   font-family: "Wix Madefor Display", sans-serif;
-  color: #1B263B;
+  color: #1C1F24;
   background-color: #e8e9e5;
   display: flex;
   justify-content: center;
@@ -22,14 +22,13 @@ body {
   min-width: 320px;
   width: fit-content;
   max-width: 1000px;
-  padding: 1.2rem;
+  padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
 }
 
 .main {
   width: 100%;
-  background-color: #415A77;
 }
 .main__title {
   text-align: center;
@@ -42,17 +41,17 @@ body {
 .main__header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0 0 2rem 0;
+  justify-content: center;
+  margin: 0 0 1.2rem 0;
 }
 .main__header p {
+  margin-inline: 1.2rem;
   padding: 1.4rem 3rem;
-  border: solid 0.05rem #415A77;
-  border-radius: 0.8rem;
+  border-radius: 0.4rem;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #f8f8f8;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px, rgba(9, 30, 66, 0.02) 0px 0px 0px 1px;
 }
 @media (max-width: 960px) {
   .main__title {
@@ -542,12 +541,21 @@ body {
   max-width: 1800px;
 }
 
+.general-container--conc {
+  max-width: 1800px;
+}
+
 .cards-container--primary {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 150px;
-  grid-gap: 0.2rem;
-  margin-block-end: 0.4rem;
+  grid-template-rows: auto;
+  grid-gap: 0.6rem;
+  margin-block-end: 1rem;
+}
+.cards-container--primary .card--concejal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .cards-container--primary .card--concejal .card__header {
   grid-template-columns: 50px auto;
@@ -568,7 +576,7 @@ body {
 }
 .cards-container--primary .card--concejal .card__info-lista {
   margin-block: 0.2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .cards-container--primary .card--concejal .card__info-candidato {
   font-weight: 800;
@@ -588,30 +596,30 @@ body {
 
 .cards-container--conc {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 50px);
-  gap: 0.4rem;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0.6rem;
 }
 
 .card--concejal {
-  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+  border: solid 0.1rem rgba(0, 95, 115, 0.6);
 }
 .card--concejal .card__image {
-  border: solid 0.5rem #415A77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border: solid 0.5rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--concejal .card__image {
-    border: solid 0.3rem #415A77;
+    border: solid 0.3rem #005f73;
   }
 }
 .card--concejal .card__body {
-  border-top: solid 0.2rem #415A77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border-top: solid 0.2rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--concejal .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415A77;
+    border-left: solid 0.2rem #005f73;
   }
 }
 
@@ -619,6 +627,7 @@ body {
   display: grid;
   grid-template-columns: auto 80px;
   box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .card--secondary .card__header {
   display: block;
@@ -628,20 +637,20 @@ body {
   margin-inline-start: 0.6rem;
 }
 .card--secondary .card__info-text {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .card--secondary .card__info-numLista {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .card--secondary .card__info-lista {
   margin-block: 0;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .card--secondary .card__info-candidato {
-  margin-top: 0.2rem;
-  font-size: 1.2rem;
+  margin-top: 0.1rem;
+  font-size: 1.4rem;
 }
 .card--secondary .card__body {
   border-bottom-left-radius: 0;
@@ -649,10 +658,10 @@ body {
   flex-direction: column;
   justify-content: center;
   border-top: none;
-  border-left: solid 0.2rem #415A77;
+  border-left: solid 0.1rem;
 }
 .card--secondary .card__body-porcentaje {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .card--secondary .card__body-votos {
   font-size: 1rem;

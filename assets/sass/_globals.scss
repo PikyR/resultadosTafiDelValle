@@ -10,6 +10,10 @@ $color-sandy-brown: #f4a259ff;
 $color-viridian: #5b8e7dff;
 $color-bittersweet-shimmer: #bc4b51ff;
 
+$color-styles-dark: #1C1F24;
+$color-styles-mid: #4C1E21;
+$color-styles-light: #005f73;
+
 // Fonts
 $font-primary: 'Wix Madefor Display', sans-serif;;
 // Font weigths
@@ -44,7 +48,7 @@ body {
   font-size: 1.6rem;
 
   font-family: $font-primary;
-  color: $color-background-dark;
+  color: $color-styles-dark;
   background-color: $color-background-light;
   display: flex;
   justify-content: center;
@@ -54,14 +58,14 @@ body {
   min-width: 320px;
   width: fit-content;
   max-width: 1000px;
-  padding: 1.2rem;
+  padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
 }
 
 .main {
   width: 100%;
-  background-color: #415A77;
+  // background-color: #415A77;
 
   &__title {
     text-align: center;
@@ -77,18 +81,18 @@ body {
   &__header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 0 2rem 0;
+    justify-content: center;
+    margin: 0 0 1.2rem 0;
 
     p {
+      margin-inline: 1.2rem;
       padding: 1.4rem 3rem;
-      border: solid 0.05rem $color-background-mid-dark;
-      border-radius: 0.8rem;
+      border-radius: 0.4rem;
       font-size: $font-lg;
-      font-weight: $font-semi-bold;
+      font-weight: $font-medium;
 
       background-color: $color-white;
-      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+      box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px, rgba(9, 30, 66, 0.02) 0px 0px 0px 1px;
     }
   }
 
