@@ -1,7 +1,7 @@
 $color-white: #f8f8f8;
-$color-background-dark: #1B263B;
-$color-background-mid-dark: #415A77;
-$color-background-light: #e8e9e5;
+$color-background-dark: #1b263b;
+$color-background-mid-dark: #415a77;
+$color-background-light: #fafafa;
 
 $color-olivine: #8cb369ff;
 $color-olivine: #8cb369ff;
@@ -10,12 +10,12 @@ $color-sandy-brown: #f4a259ff;
 $color-viridian: #5b8e7dff;
 $color-bittersweet-shimmer: #bc4b51ff;
 
-$color-styles-dark: #1C1F24;
-$color-styles-mid: #4C1E21;
+$color-styles-dark: #02152c;
+$color-styles-mid: #4c1e21;
 $color-styles-light: #005f73;
 
 // Fonts
-$font-primary: 'Wix Madefor Display', sans-serif;;
+$font-primary: "Wix Madefor Display", sans-serif;
 // Font weigths
 $font-regular: 400;
 $font-medium: 500;
@@ -49,9 +49,13 @@ body {
 
   font-family: $font-primary;
   color: $color-styles-dark;
-  background-color: $color-background-light;
   display: flex;
   justify-content: center;
+
+  background: url("assets/images/bg.jpg");
+  background-color: $color-background-mid-dark;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .general-container {
@@ -65,18 +69,15 @@ body {
 
 .main {
   width: 100%;
-  // background-color: #415A77;
 
-  &__title {
+  &__logo {
     text-align: center;
-    font-weight: $font-extra-bold;
-    margin-block-end: 1.8rem;
-  }
+    margin-bottom: 2rem;
 
-  &__subtitle {
-    margin-block-end: 1.8rem;
+    & img {
+      height: 80px;
+    }
   }
-
 
   &__header {
     display: flex;
@@ -86,28 +87,23 @@ body {
 
     p {
       margin-inline: 1.2rem;
-      padding: 1.4rem 3rem;
+      padding: 0.8rem 2.2rem;
       border-radius: 0.4rem;
       font-size: $font-lg;
-      font-weight: $font-medium;
+      font-weight: $font-semi-bold;
 
-      background-color: $color-white;
-      box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px, rgba(9, 30, 66, 0.02) 0px 0px 0px 1px;
+      background-color: rgba($color: $color-white, $alpha: 0.6);
+      box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.02) 0px 0px 0px 1px;
     }
   }
 
   @media (max-width: 960px) {
-    &__title {
-      font-size: $font-md;
-      font-weight: $font-extra-bold;
-      margin-block-end: 0.6rem;
-    }
-
-    &__subtitle {
-      text-align: center;
-      font-size: $font-md;
-      font-weight: $font-bold;
-      margin-block-end: 1rem;
+    &__logo {
+      margin-bottom: 1rem;
+      & img {
+        height: 60px;
+      }
     }
 
     &__header {
@@ -115,24 +111,31 @@ body {
       justify-content: center;
       margin-bottom: 1rem;
 
-      & p{
+      & p {
         font-size: $font-sm;
         font-weight: $font-regular;
         text-align: center;
         padding: 0.4rem 0.8rem;
         border: none;
         border-radius: 0;
-        box-shadow:none;
+        box-shadow: none;
         margin-inline: 1rem;
       }
     }
   }
 
   @media (max-width: 420px) {
+    &__logo {
+      margin-bottom: 1rem;
+      & img {
+        height: 40px;
+      }
+    }
+
     &__header {
       flex-direction: column;
       margin-bottom: 1rem;
-  
+
       p {
         padding: 0.4rem 0rem;
         margin-bottom: 0.1rem;

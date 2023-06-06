@@ -12,10 +12,13 @@ body {
   min-width: 320px;
   font-size: 1.6rem;
   font-family: "Wix Madefor Display", sans-serif;
-  color: #1C1F24;
-  background-color: #e8e9e5;
+  color: #02152c;
   display: flex;
   justify-content: center;
+  background: url("assets/images/bg.jpg");
+  background-color: #415a77;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .general-container {
@@ -30,13 +33,12 @@ body {
 .main {
   width: 100%;
 }
-.main__title {
+.main__logo {
   text-align: center;
-  font-weight: 800;
-  margin-block-end: 1.8rem;
+  margin-bottom: 2rem;
 }
-.main__subtitle {
-  margin-block-end: 1.8rem;
+.main__logo img {
+  height: 80px;
 }
 .main__header {
   display: flex;
@@ -46,24 +48,19 @@ body {
 }
 .main__header p {
   margin-inline: 1.2rem;
-  padding: 1.4rem 3rem;
+  padding: 0.8rem 2.2rem;
   border-radius: 0.4rem;
   font-size: 1.8rem;
-  font-weight: 500;
-  background-color: #f8f8f8;
+  font-weight: 600;
+  background-color: rgba(248, 248, 248, 0.6);
   box-shadow: rgba(9, 30, 66, 0.15) 0px 4px 8px -2px, rgba(9, 30, 66, 0.02) 0px 0px 0px 1px;
 }
 @media (max-width: 960px) {
-  .main__title {
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-block-end: 0.6rem;
+  .main__logo {
+    margin-bottom: 1rem;
   }
-  .main__subtitle {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-block-end: 1rem;
+  .main__logo img {
+    height: 60px;
   }
   .main__header {
     flex-direction: row;
@@ -82,6 +79,12 @@ body {
   }
 }
 @media (max-width: 420px) {
+  .main__logo {
+    margin-bottom: 1rem;
+  }
+  .main__logo img {
+    height: 40px;
+  }
   .main__header {
     flex-direction: column;
     margin-bottom: 1rem;
@@ -116,7 +119,7 @@ body {
   width: 100%;
   border-radius: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  background-color: #f8f8f8;
+  background-color: rgba(250, 250, 250, 0.9);
 }
 .card__header {
   display: grid;
@@ -344,22 +347,22 @@ body {
   border: solid 0.1rem rgba(65, 90, 119, 0.6);
 }
 .card--caliva .card__image {
-  border: solid 0.5rem #415A77;
+  border: solid 0.5rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--caliva .card__image {
-    border: solid 0.3rem #415A77;
+    border: solid 0.3rem #415a77;
   }
 }
 .card--caliva .card__body {
-  border-top: solid 0.2rem #415A77;
+  border-top: solid 0.2rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--caliva .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415A77;
+    border-left: solid 0.2rem #415a77;
   }
 }
 .card--paz {
@@ -399,22 +402,22 @@ body {
   border: solid 0.1rem rgba(65, 90, 119, 0.6);
 }
 .card--gobernador .card__image {
-  border: solid 0.5rem #415A77;
+  border: solid 0.5rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--gobernador .card__image {
-    border: solid 0.3rem #415A77;
+    border: solid 0.3rem #415a77;
   }
 }
 .card--gobernador .card__body {
-  border-top: solid 0.2rem #415A77;
+  border-top: solid 0.2rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--gobernador .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415A77;
+    border-left: solid 0.2rem #415a77;
   }
 }
 .card--gobernador .card__header {
@@ -455,22 +458,22 @@ body {
   border: solid 0.1rem rgba(65, 90, 119, 0.6);
 }
 .card--legislador .card__image {
-  border: solid 0.5rem #415A77;
+  border: solid 0.5rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--legislador .card__image {
-    border: solid 0.3rem #415A77;
+    border: solid 0.3rem #415a77;
   }
 }
 .card--legislador .card__body {
-  border-top: solid 0.2rem #415A77;
+  border-top: solid 0.2rem #415a77;
   background-color: rgba(65, 90, 119, 0.1);
 }
 @media (max-width: 960px) {
   .card--legislador .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415A77;
+    border-left: solid 0.2rem #415a77;
   }
 }
 .card--legislador .card__header {
@@ -527,7 +530,7 @@ body {
     flex-direction: column;
     justify-content: center;
     border-top: none;
-    border-left: solid 0.2rem #415A77;
+    border-left: solid 0.2rem #415a77;
   }
   .card--legislador .card__body-porcentaje {
     font-size: 1.6rem;
@@ -559,7 +562,7 @@ body {
 }
 .cards-container--primary .card--concejal .card__header {
   grid-template-columns: 50px auto;
-  padding: 0.8rem 0.4rem;
+  padding: 0.4rem 0.6rem;
 }
 .cards-container--primary .card--concejal .card__image {
   width: 50px;
@@ -587,10 +590,10 @@ body {
 }
 .cards-container--primary .card--concejal .card__body-porcentaje {
   font-weight: 800;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
 }
 .cards-container--primary .card--concejal .card__body-votos {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 

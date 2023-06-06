@@ -14,9 +14,8 @@
     flex-direction: column;
     justify-content: space-between;
     & .card__header {
-      // display: grid;
       grid-template-columns: 50px auto;
-      padding: 0.8rem 0.4rem;
+      padding: 0.4rem 0.6rem;
     }
 
     & .card__image {
@@ -51,10 +50,10 @@
 
       &-porcentaje {
         font-weight: $font-extra-bold;
-        font-size: $font-xl;
+        font-size: $font-lg;
       }
       &-votos {
-        font-size: $font-smd;
+        font-size: $font-sm;
         font-weight: $font-medium;
       }
     }
