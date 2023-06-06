@@ -1,3 +1,5 @@
+1560
+
 .general-container--conc{
   max-width: 1800px;
 }
@@ -13,6 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     & .card__header {
       grid-template-columns: 50px auto;
       padding: 0.4rem 0.6rem;
@@ -64,7 +67,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 0.6rem;
-
 
 }
 

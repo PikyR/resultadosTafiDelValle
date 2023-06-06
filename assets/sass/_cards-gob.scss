@@ -10,7 +10,7 @@
 }
 
 .card--gobernador {
-  @include card-style($color-background-mid-dark);
+  @include card-style($color-styles-light);
 
   & .card__header {
     padding: 0.6rem;

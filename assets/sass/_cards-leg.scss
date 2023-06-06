@@ -12,7 +12,7 @@
 }
 
 .card--legislador {
-  @include card-style($color-background-mid-dark);
+  @include card-style($color-styles-light);
 
   & .card__header {
     display: block;
