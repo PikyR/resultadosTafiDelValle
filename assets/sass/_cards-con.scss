@@ -1,6 +1,6 @@
-1560
+// 1560
 
-.general-container--conc{
+.general-container--conc {
   max-width: 1800px;
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     & .card__header {
       grid-template-columns: 50px auto;
       padding: 0.4rem 0.6rem;
@@ -60,6 +60,66 @@
         font-weight: $font-medium;
       }
     }
+
+    @media (max-width: 1560px) {
+      display: grid;
+      grid-template-columns: auto 80px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+      & .card__header {
+        display: grid;
+        grid-template-columns: 60px auto;
+        padding: 0.6rem 0.4rem;
+      }
+
+      & .card__info {
+        &-text {
+          font-size: $font-xsm;
+        }
+
+        &-numLista {
+          font-size: $font-xsm;
+          font-weight: $font-semi-bold;
+        }
+
+        &-lista {
+          margin-block: 0;
+          font-weight: $font-bold;
+          font-size: $font-msm;
+        }
+
+        &-candidato {
+          margin-top: 0.4rem;
+          font-size: $font-sm;
+        }
+      }
+
+      & .card__body {
+        border-bottom-left-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        border-top: none;
+        border-left: solid 0.2rem $color-background-mid-dark;
+
+        &-porcentaje {
+          font-size: $font-md;
+        }
+        &-votos {
+          font-size: $font-msm;
+        }
+      }
+    }
+  } // FIN CARD
+
+  //MOBILE
+  @media (max-width: 1560px) {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    grid-gap: 0.8rem;
+    justify-content: center;
   }
 }
 
@@ -68,17 +128,27 @@
   grid-template-rows: repeat(10, 1fr);
   gap: 0.6rem;
 
+  //MOBILE
+  @media (max-width: 1560px) {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    grid-gap: 0.8rem;
+    justify-content: center;
+  }
 }
 
 .card--concejal {
   @include card-style($color-styles-light);
+  
+  
 }
 
 .card--secondary {
   display: grid;
   grid-template-columns: auto 80px;
   box-shadow: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
   & .card__header {
     display: block;
@@ -87,7 +157,7 @@
 
   & .card__info {
     margin-inline-start: 0.6rem;
-    
+
     &-text {
       font-size: $font-msm;
     }

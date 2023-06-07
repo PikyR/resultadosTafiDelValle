@@ -15,8 +15,8 @@ body {
   color: #02152c;
   display: flex;
   justify-content: center;
-  background: url("assets/images/bg.jpg");
-  background-color: #415a77;
+  background: url("assets/images/bg-min.jpg");
+  background-color: #070E12;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -399,25 +399,25 @@ body {
 }
 
 .card--gobernador {
-  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+  border: solid 0.1rem rgba(0, 95, 115, 0.6);
 }
 .card--gobernador .card__image {
-  border: solid 0.5rem #415a77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border: solid 0.5rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--gobernador .card__image {
-    border: solid 0.3rem #415a77;
+    border: solid 0.3rem #005f73;
   }
 }
 .card--gobernador .card__body {
-  border-top: solid 0.2rem #415a77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border-top: solid 0.2rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--gobernador .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415a77;
+    border-left: solid 0.2rem #005f73;
   }
 }
 .card--gobernador .card__header {
@@ -455,25 +455,25 @@ body {
 }
 
 .card--legislador {
-  border: solid 0.1rem rgba(65, 90, 119, 0.6);
+  border: solid 0.1rem rgba(0, 95, 115, 0.6);
 }
 .card--legislador .card__image {
-  border: solid 0.5rem #415a77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border: solid 0.5rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--legislador .card__image {
-    border: solid 0.3rem #415a77;
+    border: solid 0.3rem #005f73;
   }
 }
 .card--legislador .card__body {
-  border-top: solid 0.2rem #415a77;
-  background-color: rgba(65, 90, 119, 0.1);
+  border-top: solid 0.2rem #005f73;
+  background-color: rgba(0, 95, 115, 0.1);
 }
 @media (max-width: 960px) {
   .card--legislador .card__body {
     border-top: none;
-    border-left: solid 0.2rem #415a77;
+    border-left: solid 0.2rem #005f73;
   }
 }
 .card--legislador .card__header {
@@ -596,11 +596,69 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
 }
+@media (max-width: 1560px) {
+  .cards-container--primary .card--concejal {
+    display: grid;
+    grid-template-columns: auto 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  .cards-container--primary .card--concejal .card__header {
+    display: grid;
+    grid-template-columns: 60px auto;
+    padding: 0.6rem 0.4rem;
+  }
+  .cards-container--primary .card--concejal .card__info-text {
+    font-size: 0.8rem;
+  }
+  .cards-container--primary .card--concejal .card__info-numLista {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .cards-container--primary .card--concejal .card__info-lista {
+    margin-block: 0;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .cards-container--primary .card--concejal .card__info-candidato {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+  }
+  .cards-container--primary .card--concejal .card__body {
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: none;
+    border-left: solid 0.2rem #415a77;
+  }
+  .cards-container--primary .card--concejal .card__body-porcentaje {
+    font-size: 1.6rem;
+  }
+  .cards-container--primary .card--concejal .card__body-votos {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1560px) {
+  .cards-container--primary {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    grid-gap: 0.8rem;
+    justify-content: center;
+  }
+}
 
 .cards-container--conc {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 0.6rem;
+}
+@media (max-width: 1560px) {
+  .cards-container--conc {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    grid-gap: 0.8rem;
+    justify-content: center;
+  }
 }
 
 .card--concejal {

@@ -1,5 +1,5 @@
 $color-white: #f8f8f8;
-$color-background-dark: #1b263b;
+$color-background-dark: #070E12;
 $color-background-mid-dark: #415a77;
 $color-background-light: #fafafa;
 
@@ -52,8 +52,8 @@ body {
   display: flex;
   justify-content: center;
 
-  background: url("assets/images/bg.jpg");
-  background-color: $color-background-mid-dark;
+  background: url("assets/images/bg-min.jpg");
+  background-color: $color-background-dark;
   background-position: top center;
   background-repeat: no-repeat;
 }
