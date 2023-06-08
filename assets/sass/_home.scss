@@ -15,9 +15,11 @@
   }
 
   &__btn {
+    display: block;
     padding-block: 3rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
+    text-decoration: none;
 
     background-color: #CCD7DB;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
