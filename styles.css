@@ -728,4 +728,32 @@ body {
   font-size: 1rem;
 }
 
+.general-container--home {
+  margin-top: 2rem;
+  max-width: 420px;
+}
+
+.home {
+  text-align: center;
+  padding-block: 2rem;
+}
+.home__title {
+  font-weight: 500;
+  color: #f8f8f8;
+  margin-bottom: 2rem;
+}
+.home__btn {
+  padding-block: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #CCD7DB;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.home__btn p {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #02152c;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */
