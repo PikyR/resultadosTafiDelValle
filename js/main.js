@@ -12,8 +12,6 @@ const CATEGORIA = {
   CON: "1110350784",
 }
 
-
-
 const URL = (categoria) => {
   return `${BASE_URL}${categoria}`;
 }
