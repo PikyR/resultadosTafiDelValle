@@ -1,5 +1,9 @@
 const BASE_URL =
-  "https://docs.google.com/spreadsheets/d/1C4sBJ9SoTKKyLLpnMUxZmhFPJLt3u6VkQoauOZIWZTo/gviz/tq?tqx=out:json&gid=";
+  "https://docs.google.com/spreadsheets/d/1eYWQQ32V94kdFIVq07NsaOOG8oYHX6IVaj7M0rafgjU/gviz/tq?tqx=out:json&gid=";
+
+// DATA
+// const BASE_URL =
+//   "https://docs.google.com/spreadsheets/d/1C4sBJ9SoTKKyLLpnMUxZmhFPJLt3u6VkQoauOZIWZTo/gviz/tq?tqx=out:json&gid=";
 
 const CATEGORIA = {
   GOB: "0",
@@ -7,6 +11,8 @@ const CATEGORIA = {
   INT: "593516931",
   CON: "1110350784",
 }
+
+
 
 const URL = (categoria) => {
   return `${BASE_URL}${categoria}`;
