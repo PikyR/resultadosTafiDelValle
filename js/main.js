@@ -74,5 +74,3 @@ async function fetchData(url){
     console.log("Error message: " + err.message);
   }
 }
-
-console.log('Index Coso');

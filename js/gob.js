@@ -73,9 +73,19 @@ async function loadGob() {
   votosEmitidosGob.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlancoGob.textContent = `${resultadoOtros[1].VOTOS}`;
 
+  cardsContainer.innerHTML = "";
+
   resultadoCandidatos.forEach((element, i) => {
     renderGob(element, i);
   });
 }
 
-loadGob();
+function ejecutar(func, intervalo) {
+  document.addEventListener("DOMContentLoaded", function() {
+    func();
+
+    setInterval(func, intervalo);
+  });
+}
+
+ejecutar(loadGob, 1000);

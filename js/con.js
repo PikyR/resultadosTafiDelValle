@@ -81,9 +81,19 @@ async function loadCon() {
   votosEmitidosCon.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlancoCon.textContent = `${resultadoOtros[1].VOTOS}`;
 
+  cardsContainer.innerHTML = "";
+
   resultadoCandidatos.forEach((element, i) => {
     renderCon(element, i);
   });
 }
 
-loadCon();
+function ejecutar(func, intervalo) {
+  document.addEventListener("DOMContentLoaded", function() {
+    func();
+
+    setInterval(func, intervalo);
+  });
+}
+
+ejecutar(loadCon, 1000);

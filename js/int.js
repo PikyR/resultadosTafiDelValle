@@ -5,6 +5,8 @@ const votosEmitidos = document.querySelector("#votos-emitidos");
 const votosBlanco = document.querySelector("#votos-blanco");
 
 function renderInt(data, i) {
+  // cardsContainer.innerHTML = "";
+
   const card = document.createElement('div');
   card.classList.add('card');
 
@@ -89,9 +91,19 @@ async function loadInt() {
   votosEmitidos.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlanco.textContent = `${resultadoOtros[3].VOTOS}`;
 
+  cardsContainer.innerHTML = "";
+
   resultadoCandidatos.forEach((element, i) => {
     renderInt(element, i);
   });
 }
 
-loadInt();
+function ejecutar(func, intervalo) {
+  document.addEventListener("DOMContentLoaded", function() {
+    func();
+
+    setInterval(func, intervalo);
+  });
+}
+
+ejecutar(loadInt, 1000);

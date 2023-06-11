@@ -63,9 +63,21 @@ async function loadLeg() {
   votosEmitidosLeg.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlancoLeg.textContent = `${resultadoOtros[1].VOTOS}`;
 
+  cardsContainer.innerHTML = "";
+
   resultadoCandidatos.forEach((element, i) => {
     renderLeg(element, i);
   });
 }
 
-loadLeg();
+
+
+function ejecutar(func, intervalo) {
+  document.addEventListener("DOMContentLoaded", function() {
+    func();
+
+    setInterval(func, intervalo);
+  });
+}
+
+ejecutar(loadLeg, 1000);
