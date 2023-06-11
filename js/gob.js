@@ -18,9 +18,8 @@ function renderGob(data, i) {
 
   const cardImage = document.createElement('img');
   cardImage.classList.add('card__image');
-  // CAMBIAR                              
-  // cardImage.setAttribute('src', `assets/images/gobernador/${data.LISTA}.png`);
-  cardImage.setAttribute('src', `assets/images/gobernador/img.jpg`);
+  
+  cardImage.setAttribute('src', `assets/images/gobernador/${data.LISTA}.png`);
   cardImage.setAttribute('alt', `${data.CANDIDATO}`);
 
   const cardInfo = document.createElement('div');
