@@ -75,13 +75,12 @@ async function loadCon() {
   const resultadoDividido = dividirArreglo(resultadoCon);
 
   const resultadoCandidatos = ordenarPorVotos(resultadoDividido[0]);
-  console.log('concejales', resultadoCandidatos);
   const resultadoOtros = ordenarPorVotos(resultadoDividido[1]);
 
   votosEmitidosCon.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlancoCon.textContent = `${resultadoOtros[1].VOTOS}`;
 
-  cardsContainer.innerHTML = "";
+  cardsContainerCon.innerHTML = "";
 
   resultadoCandidatos.forEach((element, i) => {
     renderCon(element, i);

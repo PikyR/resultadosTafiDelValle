@@ -73,7 +73,7 @@ async function loadGob() {
   votosEmitidosGob.textContent = `${resultadoOtros[0].VOTOS}`;
   votosBlancoGob.textContent = `${resultadoOtros[1].VOTOS}`;
 
-  cardsContainer.innerHTML = "";
+  cardsContainerGob.innerHTML = "";
 
   resultadoCandidatos.forEach((element, i) => {
     renderGob(element, i);
