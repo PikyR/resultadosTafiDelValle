@@ -80,4 +80,4 @@ function ejecutar(func, intervalo) {
   });
 }
 
-ejecutar(loadLeg, 1000);
+ejecutar(loadLeg, INTERVALO["1_min"]);

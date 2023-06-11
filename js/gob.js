@@ -88,4 +88,4 @@ function ejecutar(func, intervalo) {
   });
 }
 
-ejecutar(loadGob, 1000);
+ejecutar(loadGob, INTERVALO["1_min"]);

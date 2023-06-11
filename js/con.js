@@ -96,4 +96,4 @@ function ejecutar(func, intervalo) {
   });
 }
 
-ejecutar(loadCon, 1000);
+ejecutar(loadCon, INTERVALO["1_min"]);
