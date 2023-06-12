@@ -100,6 +100,7 @@ async function loadInt() {
 
 function ejecutar(func, intervalo) {
   document.addEventListener("DOMContentLoaded", function() {
+    cardsContainer.innerHTML = "";
     func();
 
     setInterval(func, intervalo);

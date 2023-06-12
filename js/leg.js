@@ -74,6 +74,7 @@ async function loadLeg() {
 
 function ejecutar(func, intervalo) {
   document.addEventListener("DOMContentLoaded", function() {
+    cardsContainerLeg.innerHTML = "";
     func();
 
     setInterval(func, intervalo);
