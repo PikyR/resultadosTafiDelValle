@@ -74,3 +74,12 @@ async function fetchData(url){
     console.log("Error message: " + err.message);
   }
 }
+
+function reload(intervalo) {
+  setTimeout(function() {
+    location.reload();
+    console.log("a");
+  }, intervalo);
+}
+
+reload(INTERVALO["1_min"]);
