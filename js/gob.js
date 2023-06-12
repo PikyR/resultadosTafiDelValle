@@ -78,14 +78,16 @@ async function loadGob() {
   });
 }
 
-function ejecutar(func, intervalo) {
-  document.addEventListener("DOMContentLoaded", function() {
-    cardsContainerGob.innerHTML = "";
+// function ejecutar(func, intervalo) {
+//   document.addEventListener("DOMContentLoaded", function() {
+//     cardsContainerGob.innerHTML = "";
 
-    func();
+//     func();
 
-    setInterval(func, intervalo);
-  });
-}
+//     setInterval(func, intervalo);
+//   });
+// }
 
-ejecutar(loadGob, INTERVALO["1_min"]);
+// ejecutar(loadGob, INTERVALO["1_min"]);
+
+loadGob();

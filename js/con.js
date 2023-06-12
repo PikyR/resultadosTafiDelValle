@@ -87,13 +87,15 @@ async function loadCon() {
   });
 }
 
-function ejecutar(func, intervalo) {
-  document.addEventListener("DOMContentLoaded", function() {
-    cardsContainerCon.innerHTML = "";
-    func();
+// function ejecutar(func, intervalo) {
+//   document.addEventListener("DOMContentLoaded", function() {
+//     cardsContainerCon.innerHTML = "";
+//     func();
 
-    setInterval(func, intervalo);
-  });
-}
+//     setInterval(func, intervalo);
+//   });
+// }
 
-ejecutar(loadCon, INTERVALO["1_min"]);
+// ejecutar(loadCon, INTERVALO["1_min"]);
+
+loadCon();

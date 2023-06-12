@@ -72,13 +72,15 @@ async function loadLeg() {
 
 
 
-function ejecutar(func, intervalo) {
-  document.addEventListener("DOMContentLoaded", function() {
-    cardsContainerLeg.innerHTML = "";
-    func();
+// function ejecutar(func, intervalo) {
+//   document.addEventListener("DOMContentLoaded", function() {
+//     cardsContainerLeg.innerHTML = "";
+//     func();
 
-    setInterval(func, intervalo);
-  });
-}
+//     setInterval(func, intervalo);
+//   });
+// }
 
-ejecutar(loadLeg, INTERVALO["1_min"]);
+// ejecutar(loadLeg, INTERVALO["1_min"]);
+
+loadLeg();

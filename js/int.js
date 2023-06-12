@@ -98,13 +98,15 @@ async function loadInt() {
   });
 }
 
-function ejecutar(func, intervalo) {
-  document.addEventListener("DOMContentLoaded", function() {
-    cardsContainer.innerHTML = "";
-    func();
+// function ejecutar(func, intervalo) {
+//   document.addEventListener("DOMContentLoaded", function() {
+//     cardsContainer.innerHTML = "";
+//     func();
 
-    setInterval(func, intervalo);
-  });
-}
+//     setInterval(func, intervalo);
+//   });
+// }
 
-ejecutar(loadInt, INTERVALO["1_min"]);
+// ejecutar(loadInt, INTERVALO["1_min"]);
+
+loadInt();
