@@ -87,15 +87,4 @@ async function loadCon() {
   });
 }
 
-// function ejecutar(func, intervalo) {
-//   document.addEventListener("DOMContentLoaded", function() {
-//     cardsContainerCon.innerHTML = "";
-//     func();
-
-//     setInterval(func, intervalo);
-//   });
-// }
-
-// ejecutar(loadCon, INTERVALO["1_min"]);
-
 loadCon();
