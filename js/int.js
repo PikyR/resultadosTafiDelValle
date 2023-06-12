@@ -89,7 +89,7 @@ async function loadInt() {
   const resultadoOtros = ordenarPorVotos(resultadoDividido[1]);
 
   votosEmitidos.textContent = `${resultadoOtros[0].VOTOS}`;
-  votosBlanco.textContent = `${resultadoOtros[3].VOTOS}`;
+  votosBlanco.textContent = `${resultadoOtros[1].VOTOS}`;
 
   cardsContainer.innerHTML = "";
 
